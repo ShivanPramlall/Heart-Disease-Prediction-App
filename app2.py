@@ -5,9 +5,9 @@ from sklearn.linear_model import LogisticRegression
 
 
 # load data
-dataset = pd.read_csv(r'C:\Users\Shivan\OneDrive\Desktop\ITDAA4-12 - Data Mining and Data Administration module\Project\heart (1).csv'
-            ,sep=";")
-
+#dataset = pd.read_csv(r'C:\Users\Shivan\OneDrive\Desktop\ITDAA4-12 - Data Mining and Data Administration module\Project\heart (1).csv'
+#            ,sep=";")
+dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/ITDAA-Project/main/heart%20(1).csv",sep=";")
 # creates logistics regression model
 def create_model(dataset):
     X = dataset.iloc[:,:-1] # Using all column except for the last column as X

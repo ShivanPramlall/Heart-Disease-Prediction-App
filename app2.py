@@ -1,23 +1,30 @@
 import pandas as pd
 import streamlit as st
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 
-
-# load data
-#dataset = pd.read_csv(r'C:\Users\Shivan\OneDrive\Desktop\ITDAA4-12 - Data Mining and Data Administration module\Project\heart (1).csv'
-#            ,sep=";")
 dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/ITDAA-Project/main/heart%20(1).csv",sep=";")
+
 # creates logistics regression model
 def create_model(dataset):
+
+    # Remove outliers
+    for i in [i for i in dataset.columns]:
+        if dataset[i].nunique()>=12:
+            Q1 = dataset[i].quantile(0.25)
+            Q3 = dataset[i].quantile(0.75)
+            IQR = Q3 - Q1
+            dataset = dataset[dataset[i] <= (Q3+(1.5*IQR))]
+            dataset = dataset[dataset[i] >= (Q1-(1.5*IQR))]
+
     X = dataset.iloc[:,:-1] # Using all column except for the last column as X
     y = dataset.iloc[:,-1] # Selecting the last column as Y
 
     # train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=16)
 
-    # # Train the Logistic Regression model
-    model = LogisticRegression()
+    # Train the Logistic Regression model
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
     return model
@@ -133,8 +140,7 @@ with form:
 
     model = create_model(dataset)
 
-    # "Submit" button that will clear when clicked
-    # st.form_submit_button() 
+    # "Submit" button that will submit all info selected to the model
     submitted = form.form_submit_button("Submit")
 
     if submitted:

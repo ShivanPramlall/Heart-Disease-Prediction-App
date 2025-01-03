@@ -3,7 +3,7 @@ import streamlit as st
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/ITDAA-Project/main/heart%20(1).csv",sep=";")
+dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/Heart-Disease-Prediction-App/main/heart%20(1).csv",sep=";")
 
 # creates Random Forest Classification model
 def create_model(dataset):

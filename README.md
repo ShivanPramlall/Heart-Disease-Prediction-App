@@ -9,5 +9,5 @@
 -	Web-based application: Created a Streamlit web-based interface and deployed a Random Forest model to diagnose patient’s upon selecting patient information.
 
 
-Dataset Overview
+**Dataset Overview**
 ![image](https://github.com/user-attachments/assets/60de04e1-f95a-4818-a230-1f00c59aafda)

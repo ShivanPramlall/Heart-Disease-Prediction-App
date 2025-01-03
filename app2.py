@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/ITDAA-Project/main/heart%20(1).csv",sep=";")
 
-# creates logistics regression model
+# creates Random Forest Classification model
 def create_model(dataset):
 
     # Remove outliers

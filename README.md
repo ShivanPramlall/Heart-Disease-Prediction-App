@@ -2,7 +2,7 @@ Objective: Create a Decision Support System as a web-based application (Streamli
 
 Data Preparation: Handled missing values, removed outliers and duplicates.
 
-Exploratory Data Analysis: Visualized the categorical and numerical variables against the target variable.
+Exploratory Data Analysis: Visualized the categorical and numerical variables against the target variable, to identified key patterns and trends in the data, such as the prevalence of heart disease across different age groups, gender, cholesterol levels, and other health indicators.
 
 Modelling and Forecasting:
 -	Logistic Regression, Support Vector Machine, Random Forest Models: Fitted and evaluated using Accuracy and selected the best performing model (Random Forest).

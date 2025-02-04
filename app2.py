@@ -1,11 +1,11 @@
 import pandas as pd
 import streamlit as st
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 dataset = pd.read_csv(r"https://raw.githubusercontent.com/ShivanPramlall/Heart-Disease-Prediction-App/main/heart%20(1).csv",sep=";")
 
-# creates Random Forest Classification model
+# creates Gradient Boosting Classifier model
 def create_model(dataset):
 
     X = dataset.iloc[:,:-1] # Using all column except for the last column as X
@@ -15,9 +15,7 @@ def create_model(dataset):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=16)
 
     # Train the Gradient Boosting Classifier model
-
     model = GradientBoostingClassifier()
-
     model.fit(X_train, y_train)
 
     return model

@@ -11,9 +11,9 @@ This project aims to analyze heart disease data using machine learning technique
 - Train and evaluate multiple machine learning models.
 - Identify the best-performing model for heart disease prediction.
  
-**2. Dataset
+**2. Dataset**
    
-2.1 Data Source**
+**2.1 Data Source**
 The dataset is loaded from a CSV file and contains multiple medical attributes relevant to heart disease.
  
 **2.2 Features**

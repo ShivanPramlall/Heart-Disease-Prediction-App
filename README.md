@@ -15,9 +15,11 @@ This project aims to analyze heart disease data using machine learning technique
 **2. Dataset**
    
 **2.1 Data Source**
+
 The dataset is loaded from a CSV file and contains multiple medical attributes relevant to heart disease.
  
 **2.2 Features**
+
 The dataset includes attributes such as:
 
 - Age
@@ -46,6 +48,7 @@ The dataset includes attributes such as:
 - Handling Class Imbalance: Used RandomUnderSampler to balance the dataset.
  
 **5. Machine Learning Models**
+
 The following models were implemented and evaluated:
 
 **Logistic Regression**
@@ -65,9 +68,11 @@ The following models were implemented and evaluated:
 - AUC-ROC: 0.91 (Best-performing model)
 
 **6. Model Evaluation & Selection**
+
 The Gradient Boosting Classifier demonstrated the best performance with an AUC-ROC of 0.91 and an accuracy of 0.85, making it the recommended model for heart disease prediction. Logistic Regression also performed well and could be considered for interpretability.
 
 **7. Conclusion & Future Work**
+
 Conclusion: The Gradient Boosting Classifier is the most effective model for predicting heart disease based on the dataset used.
 
 **Future Work:**
